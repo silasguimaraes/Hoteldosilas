@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.HospedagemContratada"
+             Title="HospedagemContratada"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="black">
+
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+
+        <Label Text="Casa de verão"
+            TextColor="white"
+            FontSize="38"
+            HorizontalTextAlignment="Center"/>
+
+
+        <Frame Margin="10" BorderColor="gray" 
+               WidthRequest="300"
+               BackgroundColor="{StaticResource Gray900}">
+            <HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label Text=" Adulto:" TextColor="white"/>
+                    <Label Text=" 2"
+                           TextColor="white"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label Text=" Crianças:" TextColor="white"/>
+                    <Label Text=" 2"
+                           TextColor="white"/>
+                </HorizontalStackLayout>
+
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Margin="10" BackgroundColor="{StaticResource Gray900}"
+               BorderColor="DarkGray" 
+               WidthRequest="300"> 
+            <Grid ColumnDefinitions="*, *, *"
+                  RowDefinitions="Auto, Auto">
+                <Label Grid.Row="0" Grid.Column="0" Text="Check-in" TextColor="white"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Check-out" TextColor="white"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Estadia" TextColor="white"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="11/12/24" TextColor="white"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="08/01/25" TextColor="white"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="7" TextColor="white"/>
+            </Grid>
+        </Frame>
+
+        <Frame Margin="10" Background="{StaticResource Gray900}"
+               BorderColor="DarkGray" 
+               WidthRequest="300">
+            <HorizontalStackLayout>
+                <Label Text="Valor Total: " TextColor="white"
+                       />
+                <Label Text=" R$ 270,00" TextColor="white"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Button Text="Voltar" TextColor="white"
+                WidthRequest="300"
+                BorderColor="DarkGray"
+                BorderWidth="2"
+                Clicked="Button_Clicked"
+                BackgroundColor="black" />
+    </VerticalStackLayout>
+</ContentPage>
